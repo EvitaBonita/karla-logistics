@@ -512,21 +512,14 @@
           <div data-reveal="right">
             <form
               id="contact-form"
+              action="https://formspree.io/f/xojkwqwq"
+              method="POST"
               novalidate
               class="space-y-5"
               aria-label="Kontaktní formulář — odeslat poptávku"
             >
-              <!-- Honeypot (anti-spam) -->
-              <div class="hp-field" aria-hidden="true">
-                <label for="hp-website">Web</label>
-                <input
-                  type="text"
-                  id="hp-website"
-                  name="website"
-                  tabindex="-1"
-                  autocomplete="off"
-                >
-              </div>
+              <!-- Honeypot (anti-spam) — Formspree _gotcha -->
+              <input type="text" name="_gotcha" style="display:none" aria-hidden="true" tabindex="-1" autocomplete="off">
 
               <!-- Název firmy (povinné) -->
               <div>
@@ -897,8 +890,8 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Honeypot check
-      const hp = form.querySelector('input[name="website"]');
+      // Honeypot check (_gotcha — Formspree)
+      const hp = form.querySelector('input[name="_gotcha"]');
       if (hp && hp.value.trim()) return; // bot detected — tichý fail
 
       // Validace všech polí
@@ -916,26 +909,18 @@
       submitBtn.textContent = 'Odesílám…';
 
       try {
-        // TODO: Nahradit skutečnou URL endpointu (server-side handler)
-        // Příklad: Formspree, vlastní API route, nebo Netlify Function
-        const FORM_ENDPOINT = 'TODO: FORM_ACTION_URL';
-
-        if (FORM_ENDPOINT.startsWith('TODO')) {
-          // Vývojový fallback — simulace úspěchu
-          throw new Error('Endpoint not configured');
-        }
+        const FORM_ENDPOINT = 'https://formspree.io/f/xojkwqwq';
 
         const response = await fetch(FORM_ENDPOINT, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({
-            firma:               document.getElementById('firma').value.trim(),
-            osoba:               document.getElementById('osoba').value.trim(),
-            email:               document.getElementById('email').value.trim(),
-            telefon:             document.getElementById('telefon').value.trim(),
-            zprava:              document.getElementById('zprava').value.trim(),
-            submittedAt:         new Date().toISOString(),
-            consentTextVersion:  'TODO: definovat verzi', // TODO
+            firma:       document.getElementById('firma').value.trim(),
+            osoba:       document.getElementById('osoba').value.trim(),
+            email:       document.getElementById('email').value.trim(),
+            telefon:     document.getElementById('telefon').value.trim(),
+            zprava:      document.getElementById('zprava').value.trim(),
+            submittedAt: new Date().toISOString(),
           }),
         });
 
