@@ -341,9 +341,22 @@
     <!-- ===================== POLOHA ===================== -->
     <section
       id="poloha"
-      class="py-20 lg:py-28 bg-white overflow-hidden"
+      class="relative py-20 lg:py-28 bg-white overflow-hidden"
       aria-labelledby="h2-poloha"
     >
+      <!-- Mapa Bruntálu a okolí — jemné pozadí -->
+      <div class="absolute inset-0 pointer-events-none select-none" aria-hidden="true">
+        <img
+          src="https://staticmap.openstreetmap.de/staticmap.php?center=49.988,17.464&zoom=10&size=1400x650&maptype=mapnik"
+          alt=""
+          class="w-full h-full object-cover object-center grayscale opacity-[0.12]"
+          loading="lazy"
+          decoding="async"
+        >
+        <!-- Bílý overlay pro kontrast textu ≥ 4.5:1 -->
+        <div class="absolute inset-0 bg-white/82"></div>
+      </div>
+
       <div class="max-w-container mx-auto px-4 lg:px-8 mb-12" data-reveal>
         <p class="text-[#E01020] text-xs font-semibold uppercase tracking-widest mb-3">Dopravní napojení</p>
         <h2
@@ -359,25 +372,25 @@
 
           <div class="border-l-2 border-[#E01020] pl-5 py-2" data-reveal>
             <span class="bg-[#E01020] text-white text-xs font-bold px-2 py-0.5 uppercase tracking-wider inline-block mb-2">D1</span>
-            <div class="font-bold text-[#181818] text-sm leading-snug mb-2">Opavský obchvat</div>
+            <div class="font-bold text-[#181818] text-lg leading-snug mb-2">Opavský obchvat</div>
             <p class="text-[#505050] text-sm leading-relaxed">Přímé napojení směrem na Opavu a dál k dálnici D1 usnadňuje distribuci zboží do celé Moravy.</p>
           </div>
 
           <div class="border-l-2 border-[#181818]/20 pl-5 py-2" data-reveal data-delay="1">
             <span class="bg-[#181818] text-white text-xs font-bold px-2 py-0.5 uppercase tracking-wider inline-block mb-2">69 KM</span>
-            <div class="font-bold text-[#181818] text-sm leading-snug mb-2">Ostravská aglomerace</div>
+            <div class="font-bold text-[#181818] text-lg leading-snug mb-2">Ostravská aglomerace</div>
             <p class="text-[#505050] text-sm leading-relaxed">Efektivní obsluha velkých průmyslových a logistických areálů v celém regionu.</p>
           </div>
 
           <div class="border-l-2 border-[#E01020] pl-5 py-2" data-reveal data-delay="2">
             <span class="bg-[#E01020] text-white text-xs font-bold px-2 py-0.5 uppercase tracking-wider inline-block mb-2">PL</span>
-            <div class="font-bold text-[#181818] text-sm leading-snug mb-2">Polská hranice – Głubczyce / Pietrowice (cca 35–40 km)</div>
+            <div class="font-bold text-[#181818] text-lg leading-snug mb-2">Polská hranice – Głubczyce / Pietrowice (cca 35–40 km)</div>
             <p class="text-[#505050] text-sm leading-relaxed">Napojení na silnici I/45 a bývalý hraniční přechod Krnov – Pietrowice, odkud pokračuje polská silnice č. 38 směrem na Głubczyce.</p>
           </div>
 
           <div class="border-l-2 border-[#181818]/20 pl-5 py-2" data-reveal data-delay="3">
             <span class="bg-[#181818] text-white text-xs font-bold px-2 py-0.5 uppercase tracking-wider inline-block mb-2">I/45 · I/11</span>
-            <div class="font-bold text-[#181818] text-sm leading-snug mb-2">Tranzitní tah Olomouc – Opava – Ostrava</div>
+            <div class="font-bold text-[#181818] text-lg leading-snug mb-2">Tranzitní tah Olomouc – Opava – Ostrava</div>
             <p class="text-[#505050] text-sm leading-relaxed">Město leží na důležitých tazích I/45 a I/11, které tvoří severojižní koridor mezi Olomoucí, Opavou, Ostravou a polským příhraničím.</p>
           </div>
 
