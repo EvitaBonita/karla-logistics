@@ -276,15 +276,12 @@
       class="relative py-20 lg:py-28 overflow-hidden"
       aria-labelledby="h2-infrastruktura"
     >
-      <!-- Pozadí: fotka skladu -->
-      <img
-        src="photos/web/20260412_101211_KOZ_A7408270.jpg"
-        alt=""
+      <!-- Pozadí: parallax fotka skladu -->
+      <div
         aria-hidden="true"
-        class="absolute inset-0 w-full h-full object-cover"
-        loading="lazy"
-        decoding="async"
-      />
+        class="absolute inset-0 parallax-bg"
+        style="background-image: url('photos/web/20260412_101211_KOZ_A7408270.jpg'); background-attachment: fixed; background-size: cover; background-position: center;"
+      ></div>
       <!-- Černý overlay 70 % -->
       <div class="absolute inset-0 bg-black/70" aria-hidden="true"></div>
 
@@ -411,65 +408,6 @@
 
     </section>
 
-    <!-- ===================== VIDEO PÁS ===================== -->
-    <div class="w-full overflow-hidden" style="max-height:38vw;min-height:220px;">
-      <video
-        class="w-full h-full object-cover"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="none"
-        aria-hidden="true"
-      >
-        <source src="photos/video short.MOV" type="video/quicktime" />
-        <source src="photos/video short.MOV" type="video/mp4" />
-      </video>
-    </div>
-
-    <!-- ===================== KLIENTI ===================== -->
-    <section
-      id="klienti"
-      class="py-10 lg:py-14 bg-[#F5F5F5]"
-      aria-labelledby="h2-klienti"
-    >
-      <div class="max-w-container mx-auto px-4 lg:px-8">
-
-        <div class="text-center mb-12" data-reveal>
-          <p class="text-[#E01020] text-xs font-semibold uppercase tracking-widest mb-3">Reference</p>
-          <h2
-            id="h2-klienti"
-            class="text-3xl lg:text-4xl font-bold text-[#181818]"
-          >
-            Naši klienti
-          </h2>
-        </div>
-
-        <ul
-          class="grid grid-cols-2 md:grid-cols-4 gap-8 list-none"
-          aria-label="Seznam klientů"
-        >
-          <li class="flex items-center justify-center py-6" data-reveal>
-            <img src="1.png" alt="Klient 1"
-              class="max-h-36 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy">
-          </li>
-          <li class="flex items-center justify-center py-6" data-reveal data-delay="1">
-            <img src="2.png" alt="Klient 2"
-              class="max-h-36 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy">
-          </li>
-          <li class="flex items-center justify-center py-6" data-reveal data-delay="2">
-            <img src="3.png" alt="Klient 3"
-              class="max-h-36 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy">
-          </li>
-          <li class="flex items-center justify-center py-6" data-reveal data-delay="3">
-            <img src="4.png" alt="Klient 4"
-              class="max-h-36 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy">
-          </li>
-        </ul>
-
-      </div>
-    </section>
-
     <!-- ===================== PÁS FOTEK ===================== -->
     <div class="grid grid-cols-2 lg:grid-cols-4" aria-hidden="true">
       <div class="aspect-[4/3] overflow-hidden">
@@ -508,9 +446,70 @@
           decoding="async"
         />
       </div>
-    </div>
+    </div><!-- ===================== KLIENTI ===================== -->
+    <section
+      id="klienti"
+      class="py-10 lg:py-14 bg-[#F5F5F5]"
+      aria-labelledby="h2-klienti"
+    >
+      <div class="max-w-container mx-auto px-4 lg:px-8">
 
-    <!-- ===================== KONTAKT ===================== -->
+        <div class="text-center mb-12" data-reveal>
+          <p class="text-[#E01020] text-xs font-semibold uppercase tracking-widest mb-3">Reference</p>
+          <h2
+            id="h2-klienti"
+            class="text-3xl lg:text-4xl font-bold text-[#181818]"
+          >
+            Naši klienti
+          </h2>
+        </div>
+
+        <ul
+          class="grid grid-cols-2 md:grid-cols-4 gap-8 list-none"
+          aria-label="Seznam klientů"
+        >
+          <li class="flex items-center justify-center py-6" data-reveal>
+            <a href="https://www.linaset.cz/" target="_blank" rel="noopener noreferrer" aria-label="LINASET a.s. — otevřít web">
+              <img src="1.png" alt="LINASET a.s."
+                class="max-h-36 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy">
+            </a>
+          </li>
+          <li class="flex items-center justify-center py-6" data-reveal data-delay="1">
+            <a href="https://www.maco.eu/sk-SK/Home" target="_blank" rel="noopener noreferrer" aria-label="MACCO, s.r.o. — otevřít web">
+              <img src="2.png" alt="MACCO, s.r.o."
+                class="max-h-36 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy">
+            </a>
+          </li>
+          <li class="flex items-center justify-center py-6" data-reveal data-delay="2">
+            <a href="https://www.husqvarna.com/cz/" target="_blank" rel="noopener noreferrer" aria-label="Husqvarna — otevřít web">
+              <img src="3.png" alt="Husqvarna"
+                class="max-h-36 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy">
+            </a>
+          </li>
+          <li class="flex items-center justify-center py-6" data-reveal data-delay="3">
+            <a href="https://www.optimtop.cz/" target="_blank" rel="noopener noreferrer" aria-label="OPTIMTOP — otevřít web">
+              <img src="4.png" alt="OPTIMTOP"
+                class="max-h-36 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" loading="lazy">
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </section><!-- ===================== VIDEO PÁS ===================== -->
+    <div class="w-full overflow-hidden block" style="max-height:38vw;min-height:220px;font-size:0;line-height:0;">
+      <video
+        class="w-full h-full object-cover block"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="none"
+        aria-hidden="true"
+      >
+        <source src="photos/video short.MOV" type="video/quicktime" />
+        <source src="photos/video short.MOV" type="video/mp4" />
+      </video>
+    </div><!-- ===================== KONTAKT ===================== -->
     <section
       id="kontakt"
       class="py-20 lg:py-28 bg-[#181818]"
