@@ -8,7 +8,7 @@
 ## Značka / Brand
 
 - Název firmy: **Karla Logistic**
-- Doména e-mailu: karla@logistics.cz
+- Doména e-mailu: karla.kleinova@karla.cz
 
 ---
 
@@ -115,7 +115,7 @@ Spojte se s námi. Rádi pro vás vytvoříme nabídku, která podpoří vaše p
 - Adresa: Zahradní 2004/46D, 792 01 Bruntál 1
 - Telefon: +420 602 565 432
 - Telefon 2: +420 777 164 097
-- E-mail: karla@logistics.cz
+- E-mail: karla.kleinova@karla.cz
 - Pracovní doba: Pondělí–pátek: 6:00–15:00
 
 **Formulář CTA:** Odeslat poptávku
